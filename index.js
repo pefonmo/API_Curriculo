@@ -23,6 +23,7 @@ app.post('/person', async (req, res) => {
     name,
     graduation,
     experience,
+    skills,
     
   }
 
@@ -65,12 +66,13 @@ app.get('/person/:id', async (req, res) => {
 app.patch('/person/:id', async (req, res) => {
   const id = req.params.id
 
-  const { name, graduation, experience} = req.body
+  const { name, graduation, experience, skills } = req.body
 
   const person = {
     name,
     graduation,
     experience,
+    skills,
   }
 
   try {
